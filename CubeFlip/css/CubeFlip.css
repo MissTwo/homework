@@ -1,0 +1,83 @@
+/*
+ * @Description: 
+ * @Autor:lishuangling 
+ * @Date: $
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    margin: 50px auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    background-color: palegreen;
+    position: relative;
+}
+.box1{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation:
+            move1 4s steps(4) 1 forwards,
+            move2 0s 4s steps(1) 1 forwards,
+            move3 3s 4s steps(3) 1 forwards,
+            move4 0s 8s steps(1) 1 forwards,
+            move5 3s 8s steps(3) 1 forwards,
+            move6 0s 12s steps(1) 1 forwards,
+            move7 3s 12s steps(3) 1 forwards;
+}
+@keyframes move1 {
+    to{
+        transform: translateX(400px);
+    }
+}
+@keyframes move2 {
+    to{
+        transform: translate(350px, -50px) rotate(-90deg);
+    }
+}
+@keyframes move3 {
+    to{
+        transform: translate(350px, -350px) rotate(-90deg);
+    }
+}
+@keyframes move4 {
+    to{
+        transform: translate(300px, -400px) rotate(-180deg);
+    }
+}
+@keyframes move5 {
+    to{
+        transform: translate(0px, -400px) rotate(-180deg);
+    }
+}
+@keyframes move6 {
+    to{
+        transform: translate(-50px, -350px) rotate(-270deg);
+    }
+}
+@keyframes move7 {
+    to{
+        transform: translate(-50px , -50px) rotate(-270deg);
+    }
+}
+.cube {
+    background-color: deepskyblue;
+    width: 100px;
+    height: 100px;
+   
+    transform-origin: bottom right;
+    animation: move 1s linear 16 forwards;
+}
+@keyframes move {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(90deg);
+    }
+}
